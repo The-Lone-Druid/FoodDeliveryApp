@@ -1,15 +1,19 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import Home from "./src/screens/Home";
+import Constant from 'expo-constants';
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
+    <View style={styles.statusBarAlignment}>
+      <Home />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  statusBarAlignment: {
+    marginTop: Constant.statusBarHeight,
+    backgroundColor: '#eee',
+    flex: 1
+  }
+})
